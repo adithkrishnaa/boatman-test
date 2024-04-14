@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth transition-all duration-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boatman</title>
+    <link
+      rel="shortcut icon"
+      href="./image/logo-titel.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("2PUyIfWs5tRWEwOv2");
+      })();
+    </script>
+  </head>
+  <body>
+    <section>
+      <div
+        class="flex list-none flex-wrap justify-center  bg-primary p-1 font-inter text-xs text-white md:justify-end space-x-2 md:space-x-5"
+      >
+        <li class="my-auto flex text-nowrap text-xs">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="mx-1 h-4 w-3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+            />
+          </svg>
+          <a href="tel:+919842523225">+91 9842523225</a>
+        </li>
+        <li class="my-auto list-none">|</li>
+        <li class="my-auto flex md:pr-2 lg:pr-10">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="mx-1 h-4 w-3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+            />
+          </svg>
+          <a href="mailto:gokulrajagopal.msc@gmail.com"
+            >gokulrajagopal.msc@gmail.com</a
+          >
+        </li>
+      </div>
+    </section>
+
+    <!-- navbar -->
+
+    <section id="nav" class="flex items-center border-none bg-white">
+      <nav
+        class="max-h-navb w-full border-none lg:flex"
+        style="margin-bottom: -1px"
+      >
+        <div class="mx-auto my-auto ml-auto flex justify-between">
+          <a href="#home"
+            ><img
+              class="lg:absolte z-20 h-20 lg:h-navb"
+              src="./image/logo.png"
+              alt="logo"
+          /></a>
+          <button onclick="toggleMenu()" class="lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="mr-4 h-6 w-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="relative  md:mt-3 lg:mt-7 lg:flex">
+          <div
+            class="hidden w-20 border-none bg-white lg:absolute lg:-left-12 lg:block lg:h-20 lg:w-20 xl:w-20"
+            style="transform: skewX(-38deg)"
+          ></div>
+          <ul
+            id="menu"
+            class="m-0 my-auto ml-auto hidden w-full items-center border-none bg-primary px-8 font-poppin text-slate-200 shadow-2xl md:text-sm lg:flex lg:h-20 lg:gap-x-5 lg:px-12 lg:pl-16 lg:font-semibold xl:gap-x-12 xl:pr-24 "
+          >
+            <li class="relative p-2 hover:text-secondry lg:p-0 lg:py-7">
+              <a href="#home"
+                ><hr
+                  class="absolute -top-0.5 hidden h-2 w-12 rounded-b-sm bg-secondry outline-none lg:block"
+                />
+                Home
+              </a>
+            </li>
+
+            <li class="flex-none p-2 hover:text-secondry lg:py-6">
+              <a href="#about"> About Us </a>
+            </li>
+            <li
+              class="group relative flex-none p-2 hover:text-secondry lg:py-6"
+            >
+              <a href="./OurProduct.html#product">
+                <span>Our Product </span>
+              </a>
+            </li>
+            <li class="group relative p-2 hover:text-secondry lg:py-6">
+              <a href="./Service.html">
+                <span class="flex"
+                  >Services
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <ul
+                class="z-1 top-12 z-10 hidden w-full rounded-md bg-drop bg-opacity-80 p-3 text-xs text-black group-hover:block lg:absolute lg:w-32 lg:p-1 lg:shadow-lg"
+              >
+                <li class="mt-1 p-2">
+                  <a href="./Service.html#semi">Services</a>
+                </li>
+                <li class="mt-1 p-2">
+                  <a href="./Service.html#mission">Our Mission</a>
+                </li>
+                <li class="mt-1 p-2">
+                  <a href="./Service.html#choose">Why Choose Us?</a>
+                </li>
+              </ul>
+            </li>
+            <li class="p-2 hover:text-secondry lg:py-6">
+              <a href="#contact">Contact</a>
+            </li>
+            <li class="hidden w-24 lg:flex ">
+              <div class="relative">
+                <input
+                  type="search"
+                  id="searchInput"
+                  class="relative z-10 h-8 w-8 cursor-pointer rounded-full bg-white pl-4 text-primary outline-none focus:cursor-text focus:pl-6"
+                  placeholder="Search"
+                />
+                <div
+                  id="searchSuggestions"
+                  class="absolute left-0 right-0 top-full hidden rounded-lg bg-drop bg-opacity-80 text-black"
+                ></div>
+                <svg
+                  id="searchIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute inset-y-0 top-2 z-20 mr-auto h-4 cursor-pointer stroke-black pl-2 focus:stroke-none"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Hero -->
+
+    <section id="Home" class="relative my-auto">
+      <div
+        class="bg-f my-auto min-h-screen bg-black/60 bg-[url('image/herobg.jpg')] bg-cover bg-no-repeat bg-blend-overlay"
+      >
+        <div
+          class="flex min-h-screen flex-wrap items-center justify-center lg:px-16"
+        >
+          <div class="my-auto lg:w-1/2 xl:w-7/12 2xl:w-1/2">
+            <div
+              class="mx-auto my-auto space-y-6 p-14 md:px-24 lg:p-0 xl:mx-auto"
+            >
+              <h1
+                class="font-poppin text-2xl font-medium text-gray-300 md:text-3xl lg:leading-10 xl:text-5xl"
+              >
+                India's Finest
+                <span class="flex-none">Semi Husked</span> Coconuts - Exported
+                Worldwide
+              </h1>
+              <p class="font-inter font-light text-slate-300 xl:text-lg">
+                Welcome to Boatman Overseas, your trusted source for premium
+                semi husked coconuts from the heart of Pollachi, Tamil Nadu,
+                India. We specialize in exporting the finest quality coconuts to
+                destinations all around the globe.
+              </p>
+              <button
+                class="rounded-lg border p-2 font-poppin font-medium text-slate-300 hover:bg-secondry xl:p-3"
+              >
+                <a href="#content_info">Contact Now</a>
+              </button>
+            </div>
+          </div>
+          <div class="px-20 pb-10 md:px-0 lg:w-1/2 lg:pb-0 xl:w-5/12 2xl:w-1/2">
+            <div class="slideshow">
+              <ul class="flex md:h-heromd lg:h-herolg xl:h-heroxl">
+                <li class="relative sm:mx-auto">
+                  <img
+                    class="md:min-h-heromd lg:min-h-herolg xl:min-h-heroxl mx-auto h-full hover:shadow-2xl"
+                    src="./image/hero1.png"
+                    alt="image1"
+                  />
+                  <!-- <div class="absolute -bottom-2 -right-2 w-1/2 h-1/2 border-b-8 border-r-8 border-white"></div> -->
+                </li>
+                <li class="relative mx-auto hidden">
+                  <img
+                    class="md:min-h-heromd bor lg:min-h-herolg xl:min-h-heroxl  mx-auto h-full rounded-2xl hover:shadow-2xl"
+                    src="./image/hero2.jpg"
+                    alt="image2"
+                  />
+                  <!-- <div class="absolute -bottom-2 -right-2 w-1/2 h-1/2 border-b-8 border-r-8 border-white"></div> -->
+                </li>
+                <li class="relative mx-auto hidden">
+                  <img
+                    class="md:min-h-heromd lg:min-h-herolg xl:min-h-heroxl rounded-xl mx-auto h-full hover:shadow-xl"
+                    src="./image/hero.jpg"
+                    alt="image3"
+                  />
+                  <!-- <div class="absolute bottom-0 right-0 w-1/2 h-1/2 border-b-8 border-r-8 border-white"></div> -->
+                </li>
+                <li class="relative mx-auto hidden">
+                  <img
+                    class="md:min-h-heromd lg:min-h-herolg xl:min-h-heroxl mx-auto h-full hover:shadow-2xl"
+                    src="./image/hero4.png"
+                    alt="image4"
+                  />
+                  <!-- <div class="absolute bottom-0 -right-1 w-1/2 h-1/2 border-b-8 border-r-8 border-white"></div> -->
+                </li>
+                <li class="relative mx-auto hidden">
+                  <img
+                    class="md:min-h-heromd lg:min-h-herolg xl:min-h-heroxl mx-auto h-full hover:shadow-2xl"
+                    src="./image/hero5.png"
+                    alt="image5"
+                  />
+                  <!-- <div class="absolute bottom-0 -right-1 w-1/2 h-1/2 border-b-8 border-r-8 border-white"></div> -->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mb-6 lg:mb-0">
+      <div>
+        <div class="flex">
+          <div class="relative hidden lg:flex lg:w-1/2">
+            <img
+              class="min-h-screen overflow-hidden object-cover"
+              src="./image/Rectangle 23794.png"
+              alt="image"
+            />
+            <img
+              class="absolute left-1/2 top-1/2 h-96 -translate-x-1/2 -translate-y-1/2"
+              src="./image/pngwing.com.png"
+              alt="image"
+            />
+          </div>
+          <div
+            class="container my-auto items-center space-y-6 px-16 pt-14 md:space-y-10 md:pt-10 lg:w-1/2 lg:space-y-2 lg:px-20 lg:pt-0 xl:pr-10"
+          >
+            <div class="relative space-y-10">
+              <div class="group relative">
+                <h1
+                  class="font-poppin text-2xl font-semibold text-primary md:text-3xl"
+                >
+                  ABOUT US
+                </h1>
+                <hr
+                  class="left-0 h-1 w-12 rounded-md border-4 border-solid border-secondry duration-700 group-hover:w-28 md:group-hover:w-36 lg:absolute"
+                />
+              </div>
+              <p
+                class="font-inter text-lg font-light text-primary lg:pb-8 xl:pr-28 xl:text-xl"
+              >
+                At Boatman Overseas, we're passionate about connecting the world
+                with the freshest semi husked coconuts from Pollachi, Tamil
+                Nadu, India. Our mission is to deliver premium quality coconuts
+                directly from farmers to customers worldwide. With a focus on
+                sustainability and customer satisfaction, we strive to uphold
+                Pollachi's agricultural heritage while meeting global demands.
+                Experience the taste of Pollachi with us today.
+              </p>
+            </div>
+            <button
+              class="rounded-lg border bg-secondry p-2 font-poppin font-medium text-white transition duration-700 ease-linear lg:p-3"
+            >
+              <span class="group my-auto flex duration-700 ease-linear"
+                ><a href="#contact">Countact Us </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="my-auto ml-1 hidden h-5 w-4 duration-700 group-hover:block"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                    clip-rule="evenodd"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+
+    <section class="mt-1 bg-primary pb-14 md:m-0">
+      <div>
+        <div class="space-y-4 p-12 lg:text-center">
+          <div class="space-y-4 lg:space-y-7">
+            <span class="group relative">
+              <h1
+                class="relative font-poppin text-2xl font-bold text-slate-200 md:text-3xl"
+              >
+                OUR PROCESS
+              </h1>
+              <hr
+                class="-left-24 h-1 w-14 rounded-md border-4 border-solid border-secondry duration-700 group-hover:w-40 md:group-hover:w-48 lg:absolute"
+            /></span>
+            <p
+              class="font-inter font-light text-slate-300 lg:px-10 xl:px-40 xl:text-xl"
+            >
+              At Boatman Overseas, we take pride in our meticulous process to
+              ensure the highest quality semi husked coconuts reach our
+              customers worldwide:
+            </p>
+          </div>
+        </div>
+        <div class="leading-7 lg:relative">
+          <div class="lg:mt-20">
+            <img
+              class="mx-auto hidden items-center lg:block lg:w-2/4  lg:px-3 xl:px-5 xl:pt-10"
+              src="./image/Group 1000005879 (1).png"
+              alt="Services"
+            />
+            <div
+              class="justify-center px-12 lg:absolute lg:-top-20 lg:left-1/2 lg:w-1/2 lg:-translate-x-1/2 lg:transform lg:text-center"
+            >
+              <img class="lg:hidden h-16 md:h-20" src="./image/icons8-trust-100.png" alt="img" />
+              <h2
+                class="font-poppin text-xl font-semibold text-secondry lg:text-xl"
+              >
+                Sourcing from Trusted Farmers
+              </h2>
+              <p
+                class="font-inter font-light text-slate-300 lg:text-sm xl:text-lg"
+              >
+                We acquire semi husked coconuts from trusted farmers in Pollachi
+                for their exceptional taste and quality.
+              </p>
+            </div>
+            <div
+              class="mt-4 justify-center px-10 lg:absolute lg:right-8 lg:top-20 xl:top-32 lg:mt-0 lg:w-1/4 lg:p-5 xl:right-14 xl:px-2"
+            >
+              <img
+                class="lg:hidden h-16 md:h-20"
+                src="./image/icons8-quality-80.png"
+                alt="img"
+              />
+              <h2
+                class="font-poppin text-xl font-semibold text-secondry lg:text-xl"
+              >
+                Quality Control and Sorting
+              </h2>
+              <p
+                class="font-inter font-light text-slate-300 lg:text-sm xl:text-lg"
+              >
+                Upon reaching our facilities, coconuts undergo rigorous quality
+                checks; only top-quality ones proceed for further processing.
+              </p>
+            </div>
+            <div
+              class="mt-4 pl-12 lg:absolute lg:bottom-0 lg:right-2 lg:mr-2 lg:w-1/3 xl:right-16 xl:w-1/4 xl:pl-2"
+            >
+              <img class="lg:hidden h-16 md:h-20" src="./image/icons8-packaging-100.png" alt="img" />
+              <h2
+                class="font-poppin text-xl font-semibold text-secondry lg:text-xl"
+              >
+                Semi-Husking and Packaging
+              </h2>
+              <p
+                class="font-inter font-light text-slate-300 lg:text-sm xl:text-lg"
+              >
+                We semi-husk coconuts with advanced techniques, carefully
+                package them in eco-friendly materials to preserve freshness and
+                nutrients for export.
+              </p>
+            </div>
+            <div
+              class="mt-4 px-12 lg:absolute lg:bottom-0 lg:left-8 lg:mt-0 lg:w-1/4 lg:p-5 lg:text-right xl:left-16 xl:w-1/4"
+            >
+              <img
+                class="lg:hidden h-16 md:h-20"
+                src="./image/icons8-container-truck-100.png"
+                alt="img"
+              />
+              <h2
+                class="font-poppin text-xl font-semibold text-secondry lg:text-xl"
+              >
+                Export Logistics
+              </h2>
+              <p
+                class="font-inter font-light text-slate-300 lg:text-sm xl:text-lg"
+              >
+                We use our network and logistics expertise for timely coconut
+                delivery worldwide, managing shipping by harbour efficiently.
+              </p>
+            </div>
+            <div
+              class="mt-4 px-12 lg:absolute lg:left-8 lg:top-20 xl:top-32 lg:mt-0 lg:w-1/4 lg:p-5 lg:text-right xl:left-10"
+            >
+              <img class="lg:hidden h-16 md:h-20" src="./image/icons8-quality-assurance-68.png" alt="img" />
+              <h2
+                class="font-poppin text-xl font-semibold text-secondry lg:text-xl"
+              >
+                Quality Assurance
+              </h2>
+              <p
+                class="font-inter font-light text-slate-300 lg:text-sm xl:text-lg"
+              >
+                Our quality assurance team ensures each coconut meets strict
+                standards before shipment, prioritizing customer satisfaction
+                and global delight.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center pt-14">
+          <button
+            class="rounded-lg border p-2 font-poppin font-medium text-slate-300 duration-300 ease-linear hover:bg-secondry xl:p-3"
+          >
+            <a href="#content_info">Contact Now</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-auto mb-6 max-h-screen lg:mb-0">
+      <div>
+        <div class="flex">
+          <div class="relative hidden lg:flex lg:w-1/2">
+            <img
+              class="min-h-screen overflow-hidden object-cover"
+              src="./image/Rectangle 23794.png"
+              alt="image"
+            />
+            <img
+              class="absolute left-1/2 top-1/2 h-72 -translate-x-1/2 -translate-y-1/2"
+              src="./image/pngwing.com.png"
+              alt="image"
+            />
+          </div>
+          <div
+            class="mx-auto my-auto max-h-svh items-center py-8 leading-8 lg:relative lg:w-6/12 lg:py-0"
+          >
+            <h1
+              class="font-pompiere text-2xl text-primary md:text-4xl lg:-ml-20 xl:-ml-32 lg:min-w-fit lg:text-4xl xl:text-5xl xl:leading-normal"
+            >
+              "Exporting our heritage worldwide,<br />
+              From our land to your hands,<br />
+              experience the essence of quality and tradition,<br />
+              shipped globally."
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+
+    <section
+      id="contact"
+      class="relative z-0 min-h-screen justify-items-center bg-[url('image/contact.jpg')] bg-cover"
+    >
+      <img
+        class="absolute right-0 top-0 z-10 -mt-9 size-32 md:-mt-3.5 md:size-auto"
+        src="./image/logo.svg"
+        alt=""
+      />
+      <div class="min-h-screen bg-primary bg-opacity-80 md:w-2/3 lg:w-1/2">
+        <div class="p-12 pt-20">
+          <div class="space-y-3 lg:space-y-7 lg:text-center">
+            <span class="group relative">
+              <h1
+                class="font-poppin text-2xl font-bold text-slate-200 md:text-3xl md:font-bold"
+              >
+                CONTACT US
+              </h1>
+              <hr
+                class="-left-24 h-1 w-12 rounded-md border-4 border-solid border-secondry duration-700 group-hover:w-36 md:group-hover:w-48 lg:absolute"
+            /></span>
+            <p
+              class="space-y-10 font-inter font-light text-slate-200 lg:space-y-16"
+            >
+              We're here to assist you with any enquiries or orders you may
+              have. Get in touch with our team today:
+            </p>
+          </div>
+
+          <!-- Forms -->
+          <form
+            action="#"
+            id="contactForm"
+            class="my-5 rounded-lg border px-5 py-8 xl:px-8"
+          >
+            <div
+              class="flex flex-col justify-between gap-5 lg:flex-row xl:gap-x-8"
+            >
+              <div class="flex-1">
+                <label for="name" class="font-inter text-slate-100"
+                  >Name:</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="entry.590916267"
+                  placeholder="Your Name"
+                  required
+                  class="mt-1 h-12 w-full rounded-md pl-3 focus:outline-none"
+                />
+              </div>
+              <div class="flex-1">
+                <label for="email" class="font-inter text-slate-100"
+                  >Email:</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="entry.1195376812"
+                  placeholder="example@youremail.com"
+                  required
+                  class="mt-1 h-12 w-full rounded-md pl-3 focus:outline-none"
+                />
+              </div>
+            </div>
+            <div
+              class="mt-3 flex flex-col justify-between gap-5 lg:flex-row xl:gap-x-8"
+            >
+              <div class="flex-1">
+                <label for="country" class="font-inter text-slate-100"
+                  >Country:</label
+                >
+                <input
+                  type="text"
+                  id="country"
+                  name="entry.1195376812"
+                  placeholder="Country"
+                  required
+                  class="mt-1 h-12 w-full rounded-md pl-3 focus:outline-none"
+                />
+              </div>
+              <div class="flex-1">
+                <label for="phone" class="font-inter text-slate-100"
+                  >Phone No:</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="entry.1730480520"
+                  placeholder="(123)456-7890"
+                  required
+                  class="mt-1 h-12 w-full rounded-md pl-3 focus:outline-none"
+                />
+              </div>
+            </div>
+            <label for="message" class="mt-3 block font-inter text-slate-100"
+              >Message:</label
+            >
+            <textarea
+              name="entry.254308505"
+              id="message"
+              cols="30"
+              rows="5"
+              placeholder="Type your message here..."
+              required
+              class="mt-1 w-full rounded-md pl-3 pt-2 focus:outline-none"
+            ></textarea>
+            <button
+              onclick="sendemail()"
+              type="submit"
+              id="submitButton"
+              class="mt-2 rounded-lg border p-2 font-poppin text-slate-100 transition-colors duration-500 hover:bg-secondry focus:scale-95 focus:bg-secondry"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <p class="font-inter font-normal text-slate-200">
+            We look forward to hear from you and serve your coconut needs!
+          </p>
+          <h2 class="font-poppin text-xl font-semibold text-secondry">
+            Customer Service Hours:
+          </h2>
+          <p class="font-inter text-slate-200">
+            Monday - Saturday: 9:00 AM - 5:00 PM (IST)
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact details -->
+
+    <section id="content_info">
+      <div class="relative grid py-10 font-poppin md:py-6 lg:grid-cols-3">
+        <div
+          class="space-y-3 border-dotted border-black px-7 py-10 text-center md:space-y-1 md:px-2 lg:border-r-2 lg:px-10"
+        >
+          <span>
+            <a href="tel:+919842523225"><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="mx-auto h-10 w-10 text-primary"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+              />
+            </svg></a>
+            
+          </span>
+          <h2 class="text-xl font-semibold">Speak</h2>
+          <p class="text-lg text-primary">
+            Enquire by call: <br />
+            <span class="">
+              <a class="" href="tel:+919842523225">+91 9842523225</a></span
+            >
+          </p>
+        </div>
+        <div
+          class="space-y-3 border-dotted border-black px-7 py-10 text-center md:space-y-1 md:px-36 lg:border-r-2 lg:px-10"
+        >
+          <span class="mx-auto"
+            >
+            <a href=""></a>
+            <img
+              class="mx-auto size-12"
+              src="./image/connect.svg"
+              alt="connect"
+            />
+          </span>
+          <h2 class="text-xl font-semibold">Connect</h2>
+          <p class="text-lg text-primary">
+            Reach us directly at: <br />
+            2/900, Gandhiji 1st Street, <br />
+            SR Nagar (south), Andipalayam (po), <br />
+            Mangalam Road, Tirupur, Tamil Nadu, <br />India - 641687.
+          </p>
+        </div>
+        <div
+          class="space-y-3 px-7 py-10 text-center md:space-y-1 md:px-2 lg:px-10"
+        >
+          <span 
+            >
+            <a href="mailto:gokulrajagopal.msc@gmail.com">  <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="mx-auto h-10 w-10 text-primary"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
+            </svg></a>
+          
+          </span>
+          <h2 class="text-xl font-semibold">Write</h2>
+          <p class="text-lg text-primary">
+            send enquiry to:
+            <span
+              ><a href="mailto:gokulrajagopal.msc@gmail.com">
+                gokulrajagopal.msc@gmail.com</a
+              ></span
+            >
+          </p>
+        </div>
+        <div class="absolute bottom-3 right-2">
+          <a href="#nav">
+            <div
+              class="bottom-0 rounded-full border bg-secondry p-2.5 text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <section class="bg-primary py-10">
+      <div class="px-6 md:px-16">
+        <div
+          class="mb-2 flex-wrap border-b-2 border-dotted border-opacity-30 pb-4 md:flex lg:mb-3 lg:flex-nowrap lg:pb-8 xl:gap-x-16"
+        >
+          <div class="space-y-3 md:w-3/4 lg:w-2/5">
+            <img class="max-h-20" src="./image/foo.png" alt="logo" />
+            <p class="font-poppin font-light text-slate-200">
+              Our vision to lead the global coconut export industry with
+              quality, sustainability, and customer satisfaction, enriching
+              lives worldwide with Pollachi's finest coconuts.
+            </p>
+          </div>
+          <div
+            class="mt-2 list-none space-y-3 p-2 text-slate-200 md:w-1/4 lg:w-48 lg:p-2 lg:pl-2"
+          >
+            <h2 class="font-poppin text-lg font-semibold text-secondry lg:w-40">
+              Quick Links
+            </h2>
+            <li class="font-inter font-light hover:text-secondry lg:w-40">
+              <a href="#home">Home</a>
+            </li>
+            <li class="font-inter font-light hover:text-secondry lg:w-40">
+              <a href="#about">About Us</a>
+            </li>
+            <li class="font-inter font-light hover:text-secondry lg:w-40">
+              <a href="./OurProduct.html">Our Product</a>
+            </li>
+            <li class="font-inter font-light hover:text-secondry lg:w-40">
+              <a href="./Service.html">Services</a>
+            </li>
+            <li class="font-inter font-light hover:text-secondry lg:w-40">
+              <a href="#contact">Contact Us</a>
+            </li>
+          </div>
+          <div
+            class="mt-2 list-none space-y-2 p-2 text-slate-200 md:w-2/4 lg:w-64"
+          >
+            <h2 class="font-poppin text-lg font-semibold text-secondry">
+              Services
+            </h2>
+            <li class="font-inter font-light">
+              <a href="">Quality Sourcing</a>
+            </li>
+            <li class="font-inter font-light">
+              <a href="">Customized Export Solutions</a>
+            </li>
+            <li class="font-inter font-light">
+              <a href="">Quality Assurance</a>
+            </li>
+            <li class="font-inter font-light">
+              <a href="">Sustainable Practices</a>
+            </li>
+            <li class="font-inter font-light">
+              <a href="">Timely Delivery</a>
+            </li>
+            <li class="font-inter font-light">
+              <a href="">Customer Support</a>
+            </li>
+          </div>
+          <div
+            class="mt-2 list-none space-y-3 p-2 text-slate-200 md:w-2/4 lg:w-96"
+          >
+            <h2 class="font-poppin text-lg font-semibold text-secondry">
+              Contact Us
+            </h2>
+            <li class="font-inter font-light">
+              <a href="tel:+919842523225">+91 9842523225</a>
+            </li>
+            <li class="font-inter font-light">
+              <a href="mailto:gokulrajagopal.msc@gmail.com"
+                >gokulrajagopal.msc@gmail.com</a
+              >
+            </li>
+            <p class="font-inter font-light leading-relaxed">
+              2/900, Gandhiji 1st Street, <br />
+              SR Nagar(south),Andipalayam (po), <br />
+              Mangalam Road, Tirupur, <br />
+              Tamil Nadu, India - 641687.
+            </p>
+          </div>
+        </div>
+        <div
+          class="font-poppin font-semibold text-slate-200 md:flex space-y-2 md:justify-between lg:py-3"
+        >
+          <div>
+            <p>©2024 Boatman Overseas. All rights reserved</p>
+          </div>
+          <div class="flex gap-x-6 justify-between md:justify-normal">
+            <p>Privacy & Policy</p>
+            <p>Terms & Condition</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
