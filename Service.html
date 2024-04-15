@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
+    <section id="header">
       <div
-        class="flex list-none flex-wrap justify-center  bg-primary p-1 font-inter text-xs text-white md:justify-end space-x-2 md:space-x-5"
+        class="flex list-none flex-wrap justify-center space-x-2 bg-primary p-1 font-inter text-xs text-white md:justify-end md:space-x-5"
       >
         <li class="my-auto flex text-nowrap text-xs">
           <svg
@@ -104,9 +104,35 @@
             <li
               class="group relative flex-none p-2 hover:text-secondry lg:py-6"
             >
-              <a href="./OurProduct.html">
-                <span class="flex">Our Product </span>
+              <a href="./OurProduct.html#product">
+                <span class="flex"
+                  >Our Product
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
               </a>
+              <ul
+                class="z-1 top-12 z-10 hidden w-full rounded-md bg-drop bg-opacity-80 p-3 text-xs text-black group-hover:block lg:absolute lg:w-32 lg:p-1 lg:shadow-lg"
+              >
+                <li class="mt-1 p-2">
+                  <a href="./OurProduct.html#semi">Semi Husked Coconut</a>
+                </li>
+                <li class="mt-1 p-2">
+                  <a href="./OurProduct.html#Gallery">Gallery</a>
+                </li>
+              </ul>
             </li>
             <li class="group relative p-2 hover:text-secondry lg:py-6">
               <a href="./Service.html">
@@ -492,30 +518,30 @@
     </section>
 
     <div class="relative flex justify-center py-5">
-            <button
-              class="rounded-lg border bg-secondry p-2 font-poppin font-medium text-white transition duration-700 ease-linear lg:p-3"
-            >
-              <span class="group my-auto flex duration-700 ease-linear"
-                ><a href="./index.html#contact">Enquire Now </a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="my-auto ml-1 hidden h-5 w-4 duration-700 group-hover:block"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                    clip-rule="evenodd"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </button>
+      <button
+        class="rounded-lg border bg-secondry p-2 font-poppin font-medium text-white transition duration-700 ease-linear lg:p-3"
+      >
+        <span class="group my-auto flex duration-700 ease-linear"
+          ><a href="./index.html#contact">Enquire Now </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="my-auto ml-1 hidden h-5 w-4 duration-700 group-hover:block"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+              clip-rule="evenodd"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+      </button>
       <div class="absolute bottom-3 right-2">
         <a href="#nav">
           <div

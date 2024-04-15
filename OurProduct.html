@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
+    <section id="header">
       <div
         class="flex list-none flex-wrap justify-center  bg-primary p-1 font-inter text-xs text-white md:justify-end space-x-2 md:space-x-5"
       >
@@ -60,7 +60,7 @@
     <section id="nav" class="flex items-center border-none bg-white">
       <nav
         class="max-h-navb w-full border-none lg:flex"
-        style="margin-bottom: -1px"
+        style="margin-bottom:-1px"
       >
         <div class="mx-auto my-auto ml-auto flex justify-between">
           <a href="./index.html"
@@ -104,14 +104,35 @@
             <li
               class="group relative flex-none p-2 hover:text-secondry lg:py-6"
             >
-              <a href="#product">
+              <a href="./OurProduct.html#product">
                 <span class="flex"
-                  ><hr
-                    class="absolute -top-1.5 hidden h-2 w-20 rounded-b-sm bg-secondry outline-none lg:block"
-                  />
-                  Our Product</span
-                >
+                  >Our Product
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
               </a>
+              <ul
+                class="z-1 top-12 z-10 hidden w-full rounded-md bg-drop bg-opacity-80 p-3 text-xs text-black group-hover:block lg:absolute lg:w-32 lg:p-1 lg:shadow-lg"
+              >
+                <li class="mt-1 p-2">
+                  <a href="#semi">Semi Husked Coconut</a>
+                </li>
+                <li class="mt-1 p-2">
+                  <a href="#Gallery">Gallery</a>
+                </li>
+              </ul>
             </li>
             <li class="group relative p-2 hover:text-secondry lg:py-6">
               <a href="./Service.html">
@@ -340,7 +361,7 @@
 
       <!-- Gallery -->
 
-      <section class="p-3 lg:px-14">
+      <section id="Gallery" class="p-3 lg:px-14">
         <div>
           <span class="group relative">
             <h1 class="font-inter text-2xl font-semibold text-primary">

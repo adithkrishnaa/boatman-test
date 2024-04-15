@@ -142,6 +142,22 @@ function navigateToSection(sectionId) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("header");
+  const navbar = document.getElementById("nav");
+  const headerHeight = header.offsetHeight; // Get the height of the header section
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > headerHeight) {
+      header.classList.add("sticky", "top-0", "z-30");
+      navbar.classList.add("sticky", "top-5", "z-30", "lg:h-100px", "h-80px");
+    } else {
+      header.classList.remove("sticky", "top-0", "z-30");
+      navbar.classList.remove("sticky", "top-0", "z-20");
+    }
+  });
+});
+
 function sendemail() {
   // Get the form elements
   var email = document.getElementById("email").value;
@@ -183,7 +199,7 @@ function sendemail() {
     .send("service_nj63ymj", "template_0iu6b3c", templateParams)
     .then(function (response) {
       console.log("SUCCESS!", response.status, response.text);
-      window.alert("Your form has been submitted successfully!"); 
+      window.alert("Your form has been submitted successfully!");
     })
     .catch(function (error) {
       console.error("FAILED...", error);
@@ -192,5 +208,3 @@ function sendemail() {
       );
     });
 }
-
-
