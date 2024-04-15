@@ -143,20 +143,40 @@ function navigateToSection(sectionId) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Sticky Header
   const header = document.getElementById("header");
   const navbar = document.getElementById("nav");
   const headerHeight = header.offsetHeight; // Get the height of the header section
+  const navbarHeight = navbar.offsetHeight; // Get the height of the navbar
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > headerHeight) {
       header.classList.add("sticky", "top-0", "z-30");
-      navbar.classList.add("sticky", "top-5", "z-30", "lg:h-100px", "h-80px");
+      navbar.classList.add("sticky", "top-2", "z-20");
     } else {
       header.classList.remove("sticky", "top-0", "z-30");
       navbar.classList.remove("sticky", "top-0", "z-20");
     }
   });
+
+  // Adjusting scroll position when clicking navigation links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      let targetId = this.getAttribute("href");
+      let targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - navbarHeight,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });
+
+
 
 function sendemail() {
   // Get the form elements
