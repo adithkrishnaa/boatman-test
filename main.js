@@ -334,7 +334,7 @@ function sendemail() {
   };
 
   emailjs
-    .send("service_nj63ymj", "template_0iu6b3c", templateParams)
+    .send("service_nbawuac", "template_2j7q0rg", templateParams)
     .then(function (response) {
       console.log("SUCCESS!", response.status, response.text);
       window.alert("Your form has been submitted successfully!");
@@ -342,7 +342,7 @@ function sendemail() {
     .catch(function (error) {
       console.error("FAILED...", error);
       window.alert(
-        "An error occurred while sending the email. Please try again.",
+        "An error occurred while sending the email. Please try again."
       );
     });
 }
